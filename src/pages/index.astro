@@ -1,16 +1,31 @@
 ---
-
+import Layout from '@/layouts/Layout.astro';
+import { Navbar } from '@/components/navbar/Navbar';
+import { Hero } from '@/components/sections/Hero';
+import { Skills } from '@/components/sections/Skills'; 
+import { About } from '@/components/sections/About';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Nacho | Desarrollador Full Stack">
+  <main class="relative bg-background">
+    
+    {/* Navbar con el arreglo del borde y GooeyNav */}
+    <Navbar client:load />
+
+    {/* Sección Hero */}
+    <div id="inicio">
+      <Hero client:load />
+    </div>
+
+    <About client:visible />
+
+    {/* NUEVA Sección de Habilidades con el Logo Loop */}
+    <Skills client:visible />
+    
+    {/* Espacio temporal para la futura sección de proyectos */}
+    <div id="proyectos" class="min-h-screen bg-neutral-950/50 flex items-center justify-center">
+      <h2 class="text-3xl text-primary/50">Sección de Proyectos (Próximamente)</h2>
+    </div>
+
+  </main>
+</Layout>

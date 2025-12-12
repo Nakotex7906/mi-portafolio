@@ -1,0 +1,24 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portafolio de Desarrollador Full Stack" } = Astro.props;
+---
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+   <body class="bg-slate-950 text-slate-200 antialiased selection:bg-cyan-500 selection:text-white">
+    <slot />
+    </body>
+</html>
