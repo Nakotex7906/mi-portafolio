@@ -8,7 +8,8 @@ import {
   SiGitlab, 
   SiPostgresql, 
   SiHtml5, 
-  SiJavascript, 
+  SiJavascript,
+  SiFlutter, 
 } from "react-icons/si";
 import { FaJava, FaRocket } from "react-icons/fa";
 
@@ -24,6 +25,7 @@ const skills = [
   { name: "GitHub", icon: <SiGithub className="w-10 h-10 text-white" /> },
   { name: "GitLab", icon: <SiGitlab className="w-10 h-10 text-orange-500" /> },
   { name: "CI/CD", icon: <FaRocket className="w-10 h-10 text-red-500" /> },
+  { name: "Flutter", icon: <SiFlutter className="w-10 h-10 text-blue-400" /> },
 ];
 
 export const Skills = () => {
