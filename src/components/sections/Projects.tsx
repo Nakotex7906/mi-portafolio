@@ -14,7 +14,7 @@ const projectsData: ProjectData[] = [
       "Seguridad robusta con Google OAuth2"
     ],
     tags: ["Spring Boot", "React", "PostgreSQL", "Tailwind", "Google Calendar API", "Google OAuth2"],
-    image: "/projects/book-frontera.png", 
+    image: "/projects/book-frontera.webp", 
     githubFrontend: "https://github.com/Nakotex7906/BookFronteraFront",
     githubBackend: "https://github.com/Nakotex7906/BookFronteraBack",
     demoUrl: "https://bookfrontera-fron.vercel.app/"
@@ -30,7 +30,7 @@ const projectsData: ProjectData[] = [
       "Panel de administración para gestión de productos"
     ],
     tags: ["Spring Boot", "PostgreSQL", "Vue", "Tailwind", "Spring Security"],
-    image: "/projects/ufro-gamelab.png",
+    image: "/projects/ufro-gamelab.webp",
     githubFrontend: "https://gitlab.com/dci-vn/isoft-2025-1/2-2025/ufrogamelab-frontend",
     githubBackend: "https://gitlab.com/dci-vn/isoft-2025-1/2-2025/ufrogamelab-backend",
   },
@@ -45,7 +45,7 @@ const projectsData: ProjectData[] = [
       "Integración con hardware IoT"
     ],
     tags: ["Flutter", "Dart", "IoT", "Open street Maps"], 
-    image: "/projects/safe_ride.png",
+    image: "/projects/safe_ride.webp",
     githubUrl: "https://github.com/Nakotex7906/safe_ride",
   }
 ];
@@ -60,7 +60,7 @@ export const Projects = () => {
         {/* Encabezado */}
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Proyectos Destacados <span className="text-primary">.</span>
+            Proyectos Destacados <span className="text-primary"></span>
           </h2>
           <p className="text-gray-400 max-w-2xl text-lg">
             Una selección de mis trabajos académicos y personales, aplicando arquitectura limpia y tecnologías modernas.
