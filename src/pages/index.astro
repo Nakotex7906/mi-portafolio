@@ -5,25 +5,18 @@ import { Hero } from '@/components/sections/Hero';
 import { Skills } from '@/components/sections/Skills'; 
 import { About } from '@/components/sections/About';
 import { Projects } from '@/components/sections/Projects';
+import { Contact } from '@/components/sections/Contact';
 ---
 
 <Layout title="Ignacio | Desarrollador Full Stack">
   <main class="relative bg-background">
     
-    {/* Navbar con el arreglo del borde y GooeyNav */}
     <Navbar client:load />
-
-    {/* Sección Hero */}
-    <div id="inicio">
-      <Hero client:load />
-    </div>
-
+    <div id="inicio"><Hero client:load /></div>
     <About client:visible />
-
-    {/* NUEVA Sección de Habilidades con el Logo Loop */}
     <Skills client:visible />
-    
-   <Projects client:visible />
+    <Projects client:visible />
+    <Contact client:visible />
 
   </main>
 </Layout>

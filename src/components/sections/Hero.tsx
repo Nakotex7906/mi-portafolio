@@ -19,15 +19,15 @@ export const Hero = () => {
 
         {/* Título Principal */}
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-          Hola, soy Nacho <br />
+          Hola, soy Ignacio <br />
           
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 h-[1.2em] block md:inline-block">
             <TextType 
               text={[
+                "Estudiante de Ingeniería informática",
                 "Full Stack Developer", 
                 "Experto en Spring Boot", 
-                "Conocimiento avanzado en React",
-                "Apasionado por Tailwind CSS",
+                "Conocimiento intermedio en React",
               ]} 
               typingSpeed={200}
               pauseDuration={3000}
@@ -40,17 +40,6 @@ export const Hero = () => {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Transformo ideas complejas en código robusto. Especializado en arquitecturas escalables y experiencias de usuario fluidas.
         </p>
-
-        {/* Botones */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
-            Ver Portafolio
-          </button>
-          
-          <button className="px-8 py-3 bg-black/50 backdrop-blur-md text-white font-bold rounded-lg border border-white/10 hover:bg-white/5 transition-colors">
-            Contáctame
-          </button>
-        </div>
 
       </div>
     </section>

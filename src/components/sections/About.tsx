@@ -43,15 +43,15 @@ export const About = () => {
           <div className="lg:col-span-8 space-y-8">
             
             <div className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-purple-500">⚡</span> Mi Historia
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <span className="text-purple-500"></span> Mi Historia
               </h3>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Soy un apasionado de la tecnología cursando mi <span className="text-purple-400 font-semibold">3er año de Ingeniería Informática</span>.
-                No me conformo con que el código funcione; busco que sea escalable, limpio y eficiente.
+                Actualmente estoy buscando hacer mi practica numero 1.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg mt-4">
-                Me especializo en el ecosistema **Spring Boot** para crear backends robustos y **React** para interfaces modernas. 
+                Me especializo en Spring Boot para crear backends robustos y React para interfaces modernas. 
                 Mi objetivo es combinar la solidez de la ingeniería de software con la creatividad del desarrollo frontend.
               </p>
             </div>
