@@ -1,59 +1,60 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 interface TextTypeProps {
   text: string[];
-  typingSpeed?: number;     // Velocidad de escritura (ms por caracter)
-  pauseDuration?: number;   // Pausa al terminar la frase (ms)
-  showCursor?: boolean;     // Mostrar cursor
-  cursorCharacter?: string; // Caracter del cursor
+  typingSpeed?: number;
+  pauseDuration?: number;
+  showCursor?: boolean;
+  cursorCharacter?: string;
   className?: string;
 }
 
-const TextType = ({
+const TextType: React.FC<TextTypeProps> = ({
   text,
-  typingSpeed = 150,    
-  pauseDuration = 2000,   
+  typingSpeed = 150,
+  pauseDuration = 2000,
   showCursor = true,
-  cursorCharacter = "_",  
+  cursorCharacter = "|",
   className = "",
-}: TextTypeProps) => {
-  const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+}) => {
+  const [displayText, setDisplayText] = useState('');
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentFullText = text[currentIndex % text.length];
-
+    const currentPhrase = text[currentPhraseIndex];
+    
     const handleTyping = () => {
-      if (isDeleting) {
-        setDisplayText((prev) => prev.slice(0, -1));
-      } else {
-        setDisplayText((prev) => currentFullText.slice(0, prev.length + 1));
+      setDisplayText(prev => {
+        if (isDeleting) {
+          return currentPhrase.substring(0, prev.length - 1);
+        } else {
+          return currentPhrase.substring(0, prev.length + 1);
+        }
+      });
+
+      // Lógica para cambiar de estado (escribir <-> borrar)
+      if (!isDeleting && displayText === currentPhrase) {
+        setTimeout(() => setIsDeleting(true), pauseDuration);
+      } else if (isDeleting && displayText === '') {
+        setIsDeleting(false);
+        setCurrentPhraseIndex((prev) => (prev + 1) % text.length);
       }
     };
 
-    let timer: NodeJS.Timeout;
-
-    // Lógica de tiempos
-    if (!isDeleting && displayText === currentFullText) {
-      // Frase completa -> Esperar antes de borrar
-      timer = setTimeout(() => setIsDeleting(true), pauseDuration);
-    } else if (isDeleting && displayText === "") {
-      // Frase borrada -> Pasar a la siguiente
-      setIsDeleting(false);
-      setCurrentIndex((prev) => prev + 1);
-    } else {
-      timer = setTimeout(handleTyping, isDeleting ? typingSpeed / 2 : typingSpeed);
-    }
+    const timer = setTimeout(
+      handleTyping,
+      isDeleting ? typingSpeed / 2 : typingSpeed
+    );
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentIndex, text, typingSpeed, pauseDuration]);
+  }, [displayText, isDeleting, currentPhraseIndex, text, typingSpeed, pauseDuration]);
 
   return (
-    <span className={`${className} inline-flex items-center`}>
-      <span>{displayText}</span>
+    <span className={className}>
+      {displayText}
       {showCursor && (
-        <span className="animate-pulse ml-0.5 font-bold text-primary">
+        <span className="animate-pulse ml-1 font-normal text-white/80 inline-block">
           {cursorCharacter}
         </span>
       )}

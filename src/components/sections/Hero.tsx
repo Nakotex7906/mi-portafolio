@@ -1,16 +1,16 @@
 import { DarkVeil } from '../ui/DarkVeil';
-import TextType from '../ui/TextType'; 
+import TextType from '../ui/TextType';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      
+
       {/* Fondo */}
       <DarkVeil className="absolute inset-0 z-0" />
-      
+
       {/* Contenido */}
       <div className="container mx-auto px-4 text-center z-10 relative">
-        
+
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-primary bg-primary/10 border border-primary/20 rounded-full animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -18,18 +18,18 @@ export const Hero = () => {
         </div>
 
         {/* Título Principal */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white mb-6">
           Hola, soy Ignacio <br />
-          
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 h-[1.2em] block md:inline-block">
-            <TextType 
+
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 min-h-[1.2em] h-auto block md:inline-block">
+            <TextType
               text={[
                 "Estudiante de Ingeniería informática",
-                "Full Stack Developer", 
-                "Experto en Spring Boot", 
+                "Full Stack Developer",
+                "Experto en Spring Boot",
                 "Conocimiento intermedio en React",
-              ]} 
-              typingSpeed={200}
+              ]}
+              typingSpeed={100}
               pauseDuration={3000}
               showCursor={true}
               cursorCharacter="_"
