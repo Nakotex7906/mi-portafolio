@@ -3,8 +3,8 @@ import { GooeyNav } from '../ui/GooeyNav';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
-  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Habilidades', href: '#habilidades' },
+  { label: 'Proyectos', href: '#proyectos' },
 ];
 
 export const Navbar = () => {
