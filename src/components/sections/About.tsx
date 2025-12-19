@@ -33,7 +33,7 @@ export const About = () => {
                 name="Ignacio Essus"
                 handle="@Nakotex7906"
                 status="Disponible"
-                avatarUrl="/public/avatar.webp"
+                avatarUrl="/projects/avatar.webp"
                 enableTilt={true} 
                 title={''}  
             />
