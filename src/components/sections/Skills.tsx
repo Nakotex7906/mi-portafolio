@@ -23,7 +23,7 @@ const skills = [
   { name: "PostgreSQL", icon: <SiPostgresql className="w-10 h-10 text-blue-300" /> },
   { name: "GitHub", icon: <SiGithub className="w-10 h-10 text-white" /> },
   { name: "GitLab", icon: <SiGitlab className="w-10 h-10 text-orange-500" /> },
-  { name: "Pipelines", icon: <FaRocket className="w-10 h-10 text-red-500" /> },
+  { name: "CI/CD", icon: <FaRocket className="w-10 h-10 text-red-500" /> },
 ];
 
 export const Skills = () => {

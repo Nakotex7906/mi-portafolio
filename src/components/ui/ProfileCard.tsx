@@ -27,7 +27,6 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   const mouseX = useSpring(x, { stiffness: 150, damping: 10 });
   const mouseY = useSpring(y, { stiffness: 150, damping: 10 });
 
-  // CAMBIO 1: Reducimos los grados de inclinación para que sea sutil (de 15 a 7)
   const rotateX = useTransform(mouseY, [-0.5, 0.5], ["7deg", "-7deg"]);
   const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-7deg", "7deg"]);
 
@@ -59,7 +58,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
         rotateY: enableTilt ? rotateY : 0,
         transformStyle: "preserve-3d",
       }}
-      className="relative w-full max-w-xs mx-auto bg-neutral-900 border border-white/10 rounded-2xl p-6 shadow-2xl"
+      className="relative w-full max-w-xs mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-2xl"
     >
       {/* Indicador de Estado */}
       <div className="absolute top-4 right-4 flex items-center gap-2 bg-black/40 px-2 py-1 rounded-full border border-white/5 shadow-inner">
@@ -85,7 +84,6 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
         <p className="text-gray-500 text-xs">{handle}</p>
       </div>
 
-      {/* CAMBIO 2: Solo dejamos GitHub */}
       <div className="flex justify-center mt-6 mb-2" style={{ transform: "translateZ(30px)" }}>
         <a 
           href={`https://github.com/${handle.replace('@', '')}`} 
