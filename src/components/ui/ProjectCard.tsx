@@ -6,7 +6,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
-  image: string;
+  image?: string;
   githubUrl?: string;       // Caso: Monorepo o repo único
   githubFrontend?: string;  // Caso: Repo separado Front
   githubBackend?: string;   // Caso: Repo separado Back
@@ -92,37 +92,6 @@ export const ProjectCard = ({
           ))}
         </div>
 
-        {/* BOTONES DE ACCIÓN */}
-        <div className="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-white/5">
-          
-          {/* CASO Repo Único */}
-          {githubUrl && (
-            <a href={githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors bg-white/5 px-3 py-2 rounded-lg border border-white/5 hover:border-primary/50">
-              <SiGithub size={16} /> Código
-            </a>
-          )}
-
-          {/* CASO Repos Separados (Frontend) */}
-          {githubFrontend && (
-            <a href={githubFrontend} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-cyan-400 transition-colors bg-white/5 px-3 py-2 rounded-lg border border-white/5 hover:border-cyan-500/50">
-              <FaLaptopCode size={16} /> Front
-            </a>
-          )}
-
-          {/* CASO Repos Separados (Backend) */}
-          {githubBackend && (
-            <a href={githubBackend} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-green-400 transition-colors bg-white/5 px-3 py-2 rounded-lg border border-white/5 hover:border-green-500/50">
-              <FaServer size={14} /> Back
-            </a>
-          )}
-          
-          {/* Demo (Siempre a la derecha) */}
-          {demoUrl && (
-            <a href={demoUrl} target="_blank" rel="noreferrer" className="ml-auto flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-purple-300 transition-colors">
-              <FaExternalLinkAlt size={12} /> Live Demo
-            </a>
-          )}
-        </div>
       </div>
     </div>
   );
