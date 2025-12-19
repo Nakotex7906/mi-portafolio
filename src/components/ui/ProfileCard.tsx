@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { SiGithub } from "react-icons/si"; // Solo dejamos GitHub
+import { SiGithub } from "react-icons/si"; 
 
 interface ProfileCardProps {
   name: string;
@@ -89,6 +89,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
           href={`https://github.com/${handle.replace('@', '')}`} 
           target="_blank" 
           rel="noopener noreferrer"
+          aria-label="Visitar perfil de GitHub"
           className="text-gray-400 hover:text-white transition-colors bg-white/5 p-3 rounded-full hover:bg-white/10"
         >
           <SiGithub size={24}/>

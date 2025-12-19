@@ -49,7 +49,7 @@ export const GooeyNav = ({ items }: GooeyNavProps) => {
               className="relative px-6 py-2 cursor-pointer select-none group"
             >
               <span className={`relative z-50 text-sm font-bold transition-colors duration-200 ${
-                isActive ? "text-white" : "text-white/60 group-hover:text-white"
+                isActive ? "text-neutral-900" : "text-white/60 group-hover:text-white"
               }`}>
                 {item.label}
               </span>

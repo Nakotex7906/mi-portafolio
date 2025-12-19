@@ -30,7 +30,7 @@ export const Navbar = () => {
         
         {/* Logo */}
         <a href="#inicio" className="text-2xl font-bold text-white tracking-tighter">
-          Nacho<span className="text-primary">.dev</span>
+          Mi <span className="text-primary">Portafolio</span>
         </a>
 
         {/* GooeyNav Central */}
