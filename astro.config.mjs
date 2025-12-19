@@ -12,4 +12,7 @@ export default defineConfig({
       applyBaseStyles: true, 
     }),
   ],
+  build: {
+    inlineStylesheets: 'always',
+  },
 });
